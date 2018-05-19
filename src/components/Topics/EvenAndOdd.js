@@ -10,12 +10,9 @@ class EvenAndOdd extends Component {
       userInput: '',
     }
   } 
-
     handleChange(value) {
       this.setState({ userInput: value });
     }
-
-
     splitEvensAndOdds(userInput) {
       var nums = userInput.split(',');
       var evens = [];
@@ -38,13 +35,9 @@ class EvenAndOdd extends Component {
         oddsArray: odds,
         });
     }
-  
-
-
   render() {
     return (
       <div className="puzzleBox evenAndOddPB" >
-          
         <h4>Evens And Odds</h4>
         <input className="inputLine" type="text" onChange={ e => this.handleChange(e.target.value) } />
         <button className="confirmationButton" onClick={ e => this.splitEvensAndOdds(this.state.userInput) } >Split</button>
@@ -53,14 +46,5 @@ class EvenAndOdd extends Component {
       </div>
     )
   }
-
-
-
-
-
-
-
-
-
 }
 export default EvenAndOdd;
