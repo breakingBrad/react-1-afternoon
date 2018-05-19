@@ -20,14 +20,17 @@ class EvenAndOdd extends Component {
       var nums = userInput.split(',');
       var evens = [];
       var odds = [];
+      var notNums = [];
 
       for (var i = 0; i < nums.length; i++){
         if (nums[i] % 2 === 0){
-          evens.push(+nums[i])
+          evens.push(+nums[i]) //using '+' before nums to cast the string as a number
+        }
+        else if (nums[i] % 2 === 1){
+          odds.push(+nums[i])
         }
         else {
-          // 1 + +nums[i];
-          odds.push(+nums[i])
+          notNums.push(nums[i])
         }
       }
       this.setState({ 
