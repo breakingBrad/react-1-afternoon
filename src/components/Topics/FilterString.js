@@ -19,7 +19,7 @@ class FilterString extends Component {
       var filtered = [];
 
       for ( var i = 0; i < unfiltered.length; i++ ) {
-        if ( unfiltered[i].includes(userInput) ) {
+        if ( unfiltered[i].toUpperCase().includes(userInput.toUpperCase()) ) {
           filtered.push(unfiltered[i]);
         }
       }
