@@ -32,7 +32,6 @@ class FilterObject extends Component {
       })
     }
 
-
   render() {
     return (
       <div className="puzzleBox filterObjectPB" >
